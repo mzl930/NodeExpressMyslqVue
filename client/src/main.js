@@ -1,10 +1,16 @@
 import Vue from 'vue'
+import router from './router/index'
 import App from './App'
-import router from './router'
 
-Vue.config.productionTip = false
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
-/* eslint-disable no-new */
+Vue.use(ElementUI);
+//vee-validate
+import './assets/js/vee-validate/validate.js';
+import axios from 'axios'
+Vue.prototype.$http = axios
+
 new Vue({
   el: '#app',
   router,
